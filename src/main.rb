@@ -1,4 +1,5 @@
-require_relative 's_expression_parser'
+require_relative 'interpreter'
 
-s_expression = SExpressionParser.new.parse(ARGF.read)
-pp s_expression
+s_expression = SExpressionParser.new.parse(File.read('./fib.wast'))
+itp = Interpreter.new.load(s_expression)
+itp.run(ARGV[0], ARGV[1])
