@@ -1,2 +1,2 @@
 # warb
-WASM Interpreter in ruby
+(WIP) Toy WASM Interpreter in ruby
