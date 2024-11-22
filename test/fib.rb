@@ -7,7 +7,7 @@ def fib(n)
 end
 
 def assert_fib(n)
-  s_expression = SExpressionParser.new.parse(File.read('./fib.wast'))
+  s_expression = SExpressionParser.new.parse(File.read('./fib.wat'))
   itp = Interpreter.new.load(s_expression)
   if itp.run("fib", n) != fib(n)
     raise "fib(#{n}) != #{fib(n)}"
